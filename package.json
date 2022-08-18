@@ -1,0 +1,94 @@
+{
+  "bugs": {
+    "url": "https://github.com/adaptlearning/adapt-contrib-mpabc/issues"
+  },
+  "description": "Menu, page, article, block and component layer",
+  "devDependencies": {
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/github": "^8.0.5",
+    "@semantic-release/npm": "^9.0.1",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "conventional-changelog-eslint": "^3.0.9",
+    "semantic-release": "^19.0.3"
+  },
+  "framework": ">=5.20.2",
+  "homepage": "https://github.com/adaptlearning/adapt-contrib-mpabc#readme",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPL-3.0",
+  "name": "adapt-contrib-mpabc",
+  "main": "/js/mpabc.js",
+  "displayName": "Menu, page, article, block and components",
+  "extension": "mpabc",
+  "_targetAttribute": "_mpabc",
+  "adapt_framework": {
+    "compilationMap": {
+      "core/js/collections/adaptSubsetCollection": "adapt-contrib-mpabc/js/AdaptSubsetCollection",
+      "core/js/enums/buttonStateEnum": "adapt-contrib-mpabc/js/BUTTON_STATE",
+      "core/js/models/adaptModel": "adapt-contrib-mpabc/js/AdaptModel",
+      "core/js/models/articleModel": "adapt-contrib-mpabc/js/ArticleModel",
+      "core/js/models/blockModel": "adapt-contrib-mpabc/js/BlockModel",
+      "core/js/models/componentModel": "adapt-contrib-mpabc/js/ComponentModel",
+      "core/js/models/configModel": "adapt-contrib-mpabc/js/ConfigModel",
+      "core/js/models/contentObjectModel": "adapt-contrib-mpabc/js/ContentObjectModel",
+      "core/js/models/courseModel": "adapt-contrib-mpabc/js/CourseModel",
+      "core/js/models/itemModel": "adapt-contrib-mpabc/js/ItemModel",
+      "core/js/models/itemsComponentModel": "adapt-contrib-mpabc/js/ItemsComponentModel",
+      "core/js/models/itemsQuestionModel": "adapt-contrib-mpabc/js/ItemsQuestionModel",
+      "core/js/models/menuModel": "adapt-contrib-mpabc/js/MenuModel",
+      "core/js/models/pageModel": "adapt-contrib-mpabc/js/PageModel",
+      "core/js/models/questionModel": "adapt-contrib-mpabc/js/QuestionModel",
+      "core/js/views/adaptView": "adapt-contrib-mpabc/js/AdaptView",
+      "core/js/views/articleView": "adapt-contrib-mpabc/js/ArticleView",
+      "core/js/views/blockView": "adapt-contrib-mpabc/js/BlockView",
+      "core/js/views/buttonsView": "adapt-contrib-mpabc/js/ButtonsView",
+      "core/js/views/componentView": "adapt-contrib-mpabc/js/ComponentView",
+      "core/js/views/contentObjectView": "adapt-contrib-mpabc/js/ContentObjectView",
+      "core/js/views/headingView": "adapt-contrib-mpabc/js/HeadingView",
+      "core/js/views/menuItemView": "adapt-contrib-mpabc/js/MenuItemView",
+      "core/js/views/menuView": "adapt-contrib-mpabc/js/MenuView",
+      "core/js/views/pageView": "adapt-contrib-mpabc/js/PageView",
+      "core/js/views/questionView": "adapt-contrib-mpabc/js/QuestionView",
+      "core/js/childEvent": "adapt-contrib-mpabc/js/ChildEvent",
+      "core/js/headings": "adapt-contrib-mpabc/js/headings",
+      "core/js/modelEvent": "adapt-contrib-mpabc/js/ModelEvent",
+      "core/js/mpbac": "adapt-contrib-mpabc/js/mpbac"
+    }
+  },
+  "private": true,
+  "release": {
+    "plugins": [
+      [
+        "@semantic-release/commit-analyzer",
+        {
+          "preset": "eslint"
+        }
+      ],
+      [
+        "@semantic-release/release-notes-generator",
+        {
+          "preset": "eslint"
+        }
+      ],
+      "@semantic-release/npm",
+      "@semantic-release/github",
+      [
+        "@semantic-release/git",
+        {
+          "assets": [
+            "package.json"
+          ],
+          "message": "Chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+        }
+      ]
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adaptlearning/adapt-contrib-mpabc.git"
+  },
+  "version": "1.0.0"
+}
